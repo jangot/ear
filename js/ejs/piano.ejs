@@ -1,0 +1,20 @@
+<div
+    id="pianoKeyboard"
+>
+    <ul>
+        <% for(var i = 0; i < notes.length; i++){ %>
+            <li
+                class="<%= notes[i] %>"
+                data-note="<%= notes[i] %>"
+                <% if (notes[i].length == 5) { %>
+                    data-name="<%= notes[i].split('_')[1] %>"
+                <% } %>
+            >
+                <!--%= notes[i] %-->
+            </li>
+            <% if ( (i + 1) %12 == 0) {%>
+                </ul><ul>
+            <% } %>
+        <% } %>
+    
+</div>
